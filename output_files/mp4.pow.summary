@@ -1,0 +1,12 @@
+Power Analyzer Status : Failed - Mon May  3 03:55:38 2021
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+Revision Name : mp4
+Top-level Entity Name : mp4
+Family : Arria II GX
+Device : EP2AGX45DF25I3
+Power Models : Final
+Total Thermal Power Dissipation : 597.96 mW
+Core Dynamic Thermal Power Dissipation : 255.28 mW
+Core Static Thermal Power Dissipation : 324.56 mW
+I/O Thermal Power Dissipation : 18.12 mW
+Power Estimation Confidence : Low: user provided insufficient toggle rate data

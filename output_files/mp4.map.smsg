@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at cacheline_adaptor.sv(23): object "ADDR" differs only in case from object "addr" in the same scope File: /home/sl53/411/outel/mp4/hdl/cacheline_adaptor.sv Line: 23
+Warning (10268): Verilog HDL information at arbiter_prefetch.sv(199): always construct contains both blocking and non-blocking assignments File: /home/sl53/411/outel/mp4/hdl/arbiter_prefetch.sv Line: 199

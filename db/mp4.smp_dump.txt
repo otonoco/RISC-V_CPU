@@ -1,0 +1,58 @@
+
+State Machine - |mp4|cacheline_adaptor:cd|STATE
+Name STATE.DONE STATE.HOLD STATE.WR_4 STATE.WR_3 STATE.WR_2 STATE.WR_1 STATE.RD_4 STATE.RD_3 STATE.RD_2 STATE.RD_1 STATE.ADDR STATE.BEGN 
+STATE.BEGN 0 0 0 0 0 0 0 0 0 0 0 0 
+STATE.ADDR 0 0 0 0 0 0 0 0 0 0 1 1 
+STATE.RD_1 0 0 0 0 0 0 0 0 0 1 0 1 
+STATE.RD_2 0 0 0 0 0 0 0 0 1 0 0 1 
+STATE.RD_3 0 0 0 0 0 0 0 1 0 0 0 1 
+STATE.RD_4 0 0 0 0 0 0 1 0 0 0 0 1 
+STATE.WR_1 0 0 0 0 0 1 0 0 0 0 0 1 
+STATE.WR_2 0 0 0 0 1 0 0 0 0 0 0 1 
+STATE.WR_3 0 0 0 1 0 0 0 0 0 0 0 1 
+STATE.WR_4 0 0 1 0 0 0 0 0 0 0 0 1 
+STATE.HOLD 0 1 0 0 0 0 0 0 0 0 0 1 
+STATE.DONE 1 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |mp4|ewb:eviction_buffer|STATE
+Name STATE.W_READ STATE.W_RESP STATE.R_READ STATE.IDLE STATE.W_WRTE 
+STATE.IDLE 0 0 0 0 0 
+STATE.R_READ 0 0 1 1 0 
+STATE.W_RESP 0 1 0 1 0 
+STATE.W_READ 1 0 0 1 0 
+STATE.W_WRTE 0 0 0 1 1 
+
+State Machine - |mp4|l2_cache:l2|l2_control:control|STATE
+Name STATE.HIT STATE.MS STATE.WB STATE.START 
+STATE.START 0 0 0 0 
+STATE.WB 0 0 1 1 
+STATE.MS 0 1 0 1 
+STATE.HIT 1 0 0 1 
+
+State Machine - |mp4|arbiter:arbiter|STATE
+Name STATE.d_read_resp STATE.i_read_resp STATE.d_write STATE.d_pre STATE.i_pre STATE.d_read STATE.i_read STATE.IDLE STATE.d_wrte_resp 
+STATE.IDLE 0 0 0 0 0 0 0 0 0 
+STATE.i_read 0 0 0 0 0 0 1 1 0 
+STATE.d_read 0 0 0 0 0 1 0 1 0 
+STATE.i_pre 0 0 0 0 1 0 0 1 0 
+STATE.d_pre 0 0 0 1 0 0 0 1 0 
+STATE.d_write 0 0 1 0 0 0 0 1 0 
+STATE.i_read_resp 0 1 0 0 0 0 0 1 0 
+STATE.d_read_resp 1 0 0 0 0 0 0 1 0 
+STATE.d_wrte_resp 0 0 0 0 0 0 0 1 1 
+
+State Machine - |mp4|cache:DCache|cache_control:control|state
+Name state.read_mem 
+state.check_hit 0 
+state.read_mem 1 
+
+State Machine - |mp4|cache:ICache|cache_control:control|state
+Name state.read_mem 
+state.check_hit 0 
+state.read_mem 1 
+
+State Machine - |mp4|cpu:cpu|datapath:datapath|m_extension:M_EXTENSION|Wallace_controller:MUL_controller|state
+Name state.IDLE state.DONE state.MUL 
+state.IDLE 0 0 0 
+state.MUL 1 0 1 
+state.DONE 1 1 0 
